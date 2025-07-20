@@ -1,0 +1,10 @@
+{
+    "cortex-debug.variableUseNaturalFormat": false,
+    "files.associations": {
+    },
+    "cmake.configureOnOpen": false,
+    "C_Cpp.errorSquiggles": "disabled",
+    "vscodePluginSwimming.rewriteMode": "cycle",
+
+    "cortex-debug.gdbPath": "E:\\Program Files\\NucleiStudio\\toolchain\\gcc\\bin\\riscv64-unknown-elf-gdb.exe",
+}

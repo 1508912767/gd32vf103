@@ -1,0 +1,15 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {  
+            "type": "shell",
+            "label": "Micro_OpenOCD_Release",
+            "command": "cd ${workspaceRoot}/build;cmake ..;ninja -j4;ninja openocd_flash;",
+        },
+        {
+            "type": "shell",
+            "label": "Micro_OpenOCD_Debug",
+            "command": "cd ${workspaceRoot}/build;cmake ..;ninja -j4;ninja openocd_flash;",
+        },
+    ]
+}

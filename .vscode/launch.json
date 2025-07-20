@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {  
+            "cwd": "${workspaceRoot}",
+            "executable": "build/gd32vf103.elf",
+            "name": "Micro_OpenOCD_Debug",
+            "request": "launch",
+            "type": "cortex-debug",
+            "preLaunchTask": "Micro_OpenOCD_Debug",
+            "servertype": "openocd",
+            "configFiles": [
+                "nuclei_sdk/SoC/gd32vf103/Board/gd32vf103v_rvstar/openocd_gd32vf103.cfg",
+            ],
+        },
+        {   
+            "cwd": "${workspaceRoot}",
+            "program": "build/gd32vf103.elf",
+            "name": "Micro_OpenOCD_Release",
+            "request": "launch",
+            "type": "cppdbg",
+            "preLaunchTask": "Micro_OpenOCD_Release",
+        },
+
+    ]
+}
