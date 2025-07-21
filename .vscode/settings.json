@@ -1,6 +1,9 @@
 {
     "cortex-debug.variableUseNaturalFormat": false,
     "files.associations": {
+        "interface_function.h": "c",
+        "usb_function.h": "c",
+        "gd32vf103.h": "c"
     },
     "cmake.configureOnOpen": false,
     "C_Cpp.errorSquiggles": "disabled",

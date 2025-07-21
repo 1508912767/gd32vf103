@@ -42,7 +42,7 @@ set(CMAKE_CXX_COMPILER              ${TOOLCHAIN_PREFIX}g++)
 set(CMAKE_LINKER                    ${TOOLCHAIN_PREFIX}g++)
 set(CMAKE_OBJCOPY                   ${TOOLCHAIN_PREFIX}objcopy)
 set(CMAKE_SIZE                      ${TOOLCHAIN_PREFIX}size)
-set(CMAKE_OpenOCD                   openocd)
+set(CMAKE_OpenOCD                   "E:/Program Files/NucleiStudio/toolchain/openocd/bin/openocd.exe")
 
 
 set(CMAKE_EXECUTABLE_SUFFIX_ASM     ".elf")
@@ -150,12 +150,16 @@ target_include_directories(stm32cubemx INTERFACE
     nuclei_sdk/NMSIS/Core/Include/
     nuclei_sdk/SoC/gd32vf103/Board/gd32vf103v_rvstar/Include/
     nuclei_sdk/SoC/gd32vf103/Common/Include/
+
+    hardware/Inc
 )
 
 file(GLOB SRC_LIB_0 nuclei_sdk/SoC/gd32vf103/Common/Source/Drivers/*.c)
 file(GLOB SRC_LIB_1 nuclei_sdk/SoC/gd32vf103/Common/Source/Stubs/newlib/*.c)
 file(GLOB SRC_LIB_2 nuclei_sdk/SoC/gd32vf103/Common/Source/*.c)
 file(GLOB SRC_LIB_3 nuclei_sdk/SoC/gd32vf103/Board/gd32vf103v_rvstar/Source/*.c)
+
+file(GLOB SRC_LIB_4 hardware/Src/*.c)
 
 if(SYSTEM_MODE MATCHES BAREMETAL_MODE)
     file(GLOB SRC_APP_0 application/baremetal/*.c)
@@ -194,6 +198,8 @@ target_sources(stm32cubemx INTERFACE
     ${SRC_LIB_1}
     ${SRC_LIB_2}
     ${SRC_LIB_3}
+
+    
 
     # GLOB *.S doesn't work
     nuclei_sdk/SoC/gd32vf103/Common/Source/GCC/startup_gd32vf103.S
